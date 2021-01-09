@@ -1,0 +1,101 @@
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style media="screen">
+      body {
+  width: 100vw;
+  overflow-x: hidden;
+  background: #111;
+  overflow-y: hidden;
+  font-family: 'brandon-grotesque', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main-content {
+  width: 100vw;
+  height: auto;
+  background: #111;
+  color: #f1f1f1;
+  transition: all 0.5s ease-out;
+}
+
+.main-content.start {
+  background: #fff;
+  color: #333;
+  transition: all 0.5s ease-out;
+}
+
+.landing-container {
+  width: 100vw;
+  height: 80vh;
+  padding-top: 30vh;
+}
+
+.home-landing-text {
+  width: 90vw;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-weight: 900;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  word-spacing: 8px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.light {
+  font-weight: 200;
+}
+
+.header-div {
+  width: 100px;
+  height: 2px;
+  background: #f1f1f1;
+  margin: 10px auto;
+}
+
+.home-landing-subtext {
+  width: 90vw;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+    </style>
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="landing-container">
+      <div class="home-landing-text">
+        <span class="light">Contact Doctors in Your City!</span><br><br> Enter Your City
+      </div>
+      <div class="header-div"></div>
+      <div class="home-landing-subtext">
+        <center>
+    <div class="container">
+      <form id="contact" method="post" enctype="multipart/form-data" action="DocDetail">
+        {% csrf_token %}
+        <fieldset>
+          <input placeholder="Enter City Name" type="text" tabindex="1" name="city" required value={{temp.city}}>
+        </fieldset>
+        <fieldset>
+          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Submit">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+    </center>
+
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

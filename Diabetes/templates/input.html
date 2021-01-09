@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+    <center>
+<div class="container">
+  <form id="contact" method="post" enctype="multipart/form-data" action="predictResult">
+    {% csrf_token %}
+    <h3>Please Enter Details</h3>
+    <fieldset>
+      <input placeholder="Number of times pregnant" type="text" tabindex="1" name="pregVal" required value={{temp.preg}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Plasma glucose concentration" type="text" tabindex="1" name="plasmaVal" required value={{temp.plasma}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Diastolic blood pressure (mm Hg)" type="text" tabindex="1" name="bpVal" required value={{temp.bp}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Triceps skin fold thickness (mm)" type="text" tabindex="1" name="skinVal" required value={{temp.skin}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="2-Hour serum insulin (mu U/ml)" type="text" tabindex="1" name="insulinVal" required value={{temp.insulin}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Body mass index (weight in kg/(height in m)^2)" type="text" tabindex="1" name="bmiVal" required value={{temp.bmi}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Diabetes pedigree function" type="text" tabindex="1" name="pedigreeVal" required value={{temp.pedigree}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Age(In Years)" type="text" tabindex="1" name="ageVal" required value={{temp.age}}>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Submit">Submit</button>
+    </fieldset>
+  </form>
+</div>
+</center>
+{% endblock %}
