@@ -46,10 +46,12 @@ Internet connection is a must to run the app.
 The app is now live at localhost.
 
 ## Screenshots
-* Home Page
-![homepage](https://github.com/faiz-hasan11/HeartDiseasePredictionWebsite/blob/master/Screenshots/HomePage.png)
+* Landing Page
+![LandingPage](https://github.com/faiz-hasan11/Diabetes/blob/master/Screenshots/landingpage.png)
+* Input Page
+![Input Page](https://github.com/faiz-hasan11/Diabetes/blob/master/Screenshots/inputpage.png)
 * Prediction Page
-![Have Diease](https://github.com/faiz-hasan11/HeartDiseasePredictionWebsite/blob/master/Screenshots/HaveDisease.png)
-![Dont Have Diease](https://github.com/faiz-hasan11/HeartDiseasePredictionWebsite/blob/master/Screenshots/DontHaveDisease.png)
-
+![Prediction Page](https://github.com/faiz-hasan11/Diabetes/blob/master/Screenshots/predictionpage.png)
+* Doctor Consult Page
+![Doctor Consult Page](https://github.com/faiz-hasan11/Diabetes/blob/master/Screenshots/doctorconsult.png)
 
